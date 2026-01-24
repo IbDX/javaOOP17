@@ -3166,33 +3166,7 @@ public class Test {
         
         </div>
         
-        <div class="question-container" id="q-53">
-            <div class="q-meta">Question 54 <span class="q-tag">[MCQ]</span></div>
-            <div class="q-content">
-                <div class="q-text">After the following program is finished, how many bytes are written to the file <code class="inline-code">complex.dat</code>?</div>
-                
-                
-                <div class="input-box">
-                <label>Answer:</label>
-                <textarea id="q-53-input" rows="4" placeholder="Type answer here..."></textarea>
-            </div>
-            </div>
-            <button class="check-btn" onclick="checkOne('q-53', 53)">Check Answer</button>
-            
-        <div class="answer-reveal" id="q-53-reveal">
-            <div class="answer-box">
-                <div class="answer-header">
-                    <span class="answer-label">Answer:</span>
-                    <span class="answer-value">See Explanation</span>
-                </div>
-                <div class="answer-exp">
-                    <strong>Explanation:</strong> 
-                    <code class="inline-code">writeUTF("ABC")</code> writes 2 bytes (length prefix) + 3 bytes (for "ABC") = 5 bytes. <code class="inline-code">writeLong(123L)</code> writes 8 bytes. <code class="inline-code">writeShort(45)</code> writes 2 bytes. Total = 5 + 8 + 2 = 15 bytes. This question's options are tricky, making it hard. Let's re-evaluate. Option D (13 bytes) is closer to the intended difficulty for 'hard' if assuming an error in the byte count options or the UTF length. However, strictly adhering to <code class="inline-code">writeUTF</code> rule it's 15. The options provided in the prompt sample indicate a possibility of slightly off options. Reconsidering, the example provided in the prompt has a calculation leading to '6 bytes' as a correct answer for writeUTFString, which is for 'ABCD'. 'ABCD' is 4 chars, <code class="inline-code">writeUTFString</code> is an incorrect method name, but <code class="inline-code">writeUTF</code> would be 2+4=6 bytes. Given the options here, if it was `writeBytes(
-                </div>
-            </div>
-        </div>
-        
-        </div>
+     
         
         <div class="question-container" id="q-54">
             <div class="q-meta">Question 55 <span class="q-tag">[MCQ]</span></div>

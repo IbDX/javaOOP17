@@ -705,6 +705,7 @@
         </div>
         
         </div>
+
         
         <div class="question-container" id="q-9">
             <div class="q-meta">Question 10 <span class="q-tag">[MCQ]</span></div>
@@ -5386,6 +5387,7 @@ public class TestFileStream {
                     </label>
                 
             </div>
+                
             </div>
             <button class="check-btn" onclick="checkOne('q-79', 79)">Check Answer</button>
             
@@ -5403,6 +5405,131 @@ public class TestFileStream {
         </div>
         
         </div>
+           <div class="question-container" id="q-80">
+            <div class="q-meta">Question 81 <span class="q-tag">[MCQ]</span></div>
+            <div class="q-content">
+                <div class="q-text">After the following program is finished, how many bytes are written to the file t.dat?</div>
+                
+                <div class="code-snippet"><pre><code class="language-javascript">import java.io.*;
+public class Test {
+  public static void main(String[] args) throws IOException {
+    DataOutputStream output = new DataOutputStream(
+      new FileOutputStream("t.dat"));
+    output.writeUTF("你好"); // "Ni Hao" in Chinese
+    output.close();
+  }
+}</code></pre></div>
+                <div class="options-list">
+                
+                    <label class="option-item" id="q-80-opt-0">
+                        <input type="radio" name="q-80" value="0">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">2 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+                    <label class="option-item" id="q-80-opt-1">
+                        <input type="radio" name="q-80" value="1">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">4 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+                    <label class="option-item" id="q-80-opt-2">
+                        <input type="radio" name="q-80" value="2">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">6 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+                    <label class="option-item" id="q-80-opt-3">
+                        <input type="radio" name="q-80" value="3">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">8 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+            </div>
+            </div>
+            <button class="check-btn" onclick="checkOne('q-80', 8)">Check Answer</button>
+            
+        <div class="answer-reveal" id="q-80-reveal">
+            <div class="answer-box">
+                <div class="answer-header">
+                    <span class="answer-label">Answer:</span>
+                    <span class="answer-value">(D) 8 bytes.</span>
+                </div>
+                <div class="answer-exp">
+                    <strong>Explanation:</strong> 
+                    The <code class="inline-code">writeUTF</code> method writes a 2-byte length prefix followed by the UTF-8 encoding of the string. The string "你好" has 2 characters. Each Chinese character in UTF-8 typically takes 3 bytes. So, the total bytes written are 2 (length prefix) + 2 (characters) * 3 (bytes/character) = 2 + 6 = 8 bytes.
+                </div>
+            </div>
+        </div>
+        
+        </div>  
+<div class="question-container" id="q-81">
+            <div class="q-meta">Question 82 <span class="q-tag">[MCQ]</span></div>
+            <div class="q-content">
+                <div class="q-text">After the following program is finished, how many bytes are written to the file t.dat?</div>
+                
+                <div class="code-snippet"><pre><code class="language-javascript">import java.io.*;
+public class Test {
+  public static void main(String[] args) throws IOException {
+    DataOutputStream output = new DataOutputStream(
+      new FileOutputStream("t.dat"));
+    output.writeChars("你好"); // "Ni Hao" in Chinese
+    output.close();
+  }
+}</code></pre></div>
+                <div class="options-list">
+                
+                    <label class="option-item" id="q-81-opt-0">
+                        <input type="radio" name="q-81" value="0">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">2 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+                    <label class="option-item" id="q-81-opt-1">
+                        <input type="radio" name="q-81" value="1">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">4 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+                    <label class="option-item" id="q-81-opt-2">
+                        <input type="radio" name="q-81" value="2">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">6 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+                    <label class="option-item" id="q-81-opt-3">
+                        <input type="radio" name="q-81" value="3">
+                        <span class="radio-custom"></span>
+                        <span class="option-text">8 bytes.</span>
+                        <span class="feedback-icon"></span>
+                    </label>
+                
+            </div>
+            </div>
+            <button class="check-btn" onclick="checkOne('q-81', 9)">Check Answer</button>
+            
+        <div class="answer-reveal" id="q--reveal">
+            <div class="answer-box">
+                <div class="answer-header">
+                    <span class="answer-label">Answer:</span>
+                    <span class="answer-value">(B) 4 bytes.</span>
+                </div>
+                <div class="answer-exp">
+                    <strong>Explanation:</strong> 
+                    The <code class="inline-code">writeChars</code> method writes each character as a 2-byte Unicode value, regardless of whether it's ASCII or non-ASCII. The string "你好" has 2 characters. So, the total bytes written are 2 (characters) * 2 (bytes/character) = 4 bytes.
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
         </div>
 
     <div class="submit-section">
